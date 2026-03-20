@@ -6,7 +6,7 @@ import java.util.Scanner;
 //Se contabilizarán presentes y ausentes durante el proceso.
 //Finalmente, se mostrará un resumen de la asistencia general.
 
-public class Asistencia {
+public class ControlDeAsistencia {
  public static void main(String[] args) {
 
   Scanner sc = new Scanner(System.in);
