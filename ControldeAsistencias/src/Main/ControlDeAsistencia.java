@@ -14,11 +14,15 @@ public class ControlDeAsistencia {
   int cantidad;
   int presentes = 0;
   int ausentes = 0;
+  int opcion;
 
   System.out.println("Ingrese la cantidad de estudiantes:");
   cantidad = sc.nextInt();
 
-  for(int i = 1; i <= cantidad; i++){
+  int i = 1;
+
+  // usamos while
+  while(i <= cantidad){
 
    System.out.println("Estudiante #" + i);
    System.out.println("Ingrese 1 si esta presente, 0 si esta ausente:");
@@ -29,10 +33,19 @@ public class ControlDeAsistencia {
    }else{
     ausentes++;
    }
+
+   i++;
   }
 
-  System.out.println("\n--- RESUMEN ---");
-  System.out.println("Presentes: " + presentes);
-  System.out.println("Ausentes: " + ausentes);
+  // usamos do while para mostrar menu/repetir
+  do{
+   System.out.println("\n--- RESUMEN ---");
+   System.out.println("Presentes: " + presentes);
+   System.out.println("Ausentes: " + ausentes);
+
+   System.out.println("Desea ver el resumen otra vez? (1=si / 0=no)");
+   opcion = sc.nextInt();
+
+  }while(opcion == 1);
  }
 }
